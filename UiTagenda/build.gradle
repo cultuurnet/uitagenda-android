@@ -1,0 +1,60 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.0"
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 19
+        versionCode 5
+        versionName "2.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/comnewrelic-1140'
+        }
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/comnewrelic-1141'
+        }
+
+    }
+
+    dependencies {
+        classpath 'com.newrelic.agent.android:agent-gradle-plugin:3.372.0'
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/comnewrelic-1140'
+    }
+}
+
+apply plugin: 'android'
+apply plugin: 'newrelic'
+
+
+dependencies {
+    compile 'com.android.support:support-v4:19.0.0'
+    compile 'com.android.support:appcompat-v7:+'
+    compile 'com.github.chrisbanes.actionbarpulltorefresh:extra-abc:+'
+    compile files('libs/signpost-core-1.2.1.2.jar')
+    compile files('libs/universal-image-loader-1.9.1-with-sources.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/libGoogleAnalyticsServices.jar')
+    compile 'com.newrelic.agent.android:android-agent:3.372.0'
+}
+
+

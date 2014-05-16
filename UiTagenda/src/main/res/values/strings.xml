@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Config strings -->
+
+    <string name="consumer_key"></string>
+    <string name="consumer_secret"></string>
+    <string name="base_url">http://www.uitid.be/uitid/rest/searchv2/search?</string>
+
+    <!-- end Config strings -->
+
+    <string name="app_name">UiTagenda</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_filter">Zoeken</string>
+    <string name="action_favorite">Favorieten</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item name="test">Hier en nu</item>
+        <item>Zoeken</item>
+        <item>Favorieten</item>
+        <item>Mijn Zoekopdrachten</item>
+        <item>Over</item>
+    </string-array>
+
+    <string name="title_activity_favorites">FavoritesActivity</string>
+    <string name="about_url">http://www.uitinvlaanderen.be/appinfo.json</string>
+    <string name="no_location">Locatie bepalen is mislukt. Staan locatie services aan?</string>
+    <string name="searchquery_rows">15</string>
+    <string name="searchquery_radius">10</string>
+    <string name="no_internetconnection">Er ging iets mis. Is er een internetverbinding?</string>
+    <string name="error">Er ging iets mis.</string>
+    <string name="loading_events">Resultaten worden geladen</string>
+    <string name="loading_message">Even geduld aub</string>
+    <string name="loading_favorites">Favorieten laden</string>
+    <string name="detail">Details</string>
+    <string name="et_searchterm">Zoekterm</string>
+    <string name="text_btn_search">Zoeken</string>
+    <string name="cancel">Annuleren</string>
+    <string name="select">Selecteren</string>
+    <string name="NO_PLACE">Gelieve ook een plaats aan te duiden als u wilt zoeken op straal.</string>
+    <string name="action_searchResults">Zoekresultaten</string>
+    <string name="question_save_query">Zoekopdracht bewaren?</string>
+    <string name="question_save_query_message_">Naam zoekopdracht: </string>
+    <string name="query_saved">Bewaren</string>
+    <string name="searchquery_saved">Zoekopdracht bewaard!</string>
+    <string name="savequery_title_already_exists">Deze zoekopdracht is al bewaard!</string>
+    <string name="savequery_no_title">Gelieve een titel in te geven.</string>
+    <string name="no_results">Geen resultaten</string>
+    <string name="noresults_favorites">U hebt nog geen favorieten.</string>
+    <string name="noresults_home">Er konden geen resultaten gevonden worden.</string>
+    <string name="noresults_nointernet">Onze excuses, er heeft zich een probleem voor gedaan. Heeft u een internetverbinding?</string>
+    <string name="noresults_nolocation">Locatie bepalen is mislukt. Staan locatievoorzieningen aan?</string>
+    <string name="noresults_queries">U hebt nog geen zoekopdrachten bewaard</string>
+    <string name="extra_info">Extra info: \u0020</string>
+    <string name="detail_organiser">Organisator</string>
+    <string name="detail_contact">Contact</string>
+    <string name="detail_reservation">Reservatie</string>
+    <string name="detail_links">Links</string>
+    <string name="detail_price">Prijs</string>
+    <string name="detail_category">Categorie</string>
+    <string name="detail_description">Uitgebreide Omschrijving</string>
+    <string name="detail_favorite">Favoriet</string>
+    <string name="detail_share">Delen</string>
+    <string name="search_where_hint">Zoek postcode of gemeente</string>
+    <string name="detail_performers">Wie</string>
+    <string name="share_url">http://www.uitinvlaanderen.be/agenda/e/app_redirect/</string>
+    <string name="nomore_results">Einde van de Resultaten</string>
+
+</resources>
