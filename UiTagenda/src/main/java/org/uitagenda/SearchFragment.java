@@ -410,8 +410,15 @@ public class SearchFragment extends Fragment {
                 if (eventTypesMap == null) {
                     createEventTypesMap();
                 }
+
+                for (int i = tempWhat.size()-1; i > -1; i--) {
+                    if (!selectedWhat.contains(eventTypesMap.get(tempWhat.get(i)))) {
+                        tempWhat.remove(i);
+                    }
+                }
+
                 list.addAll(eventTypesMap.keySet());
-                searchAdapter = new UiTSearchAdapter(getActivity(), list, currentWhat, "");
+                searchAdapter = new UiTSearchAdapter(getActivity(), list, tempWhat, "");
                 listview.setAdapter(searchAdapter);
                 break;
         }

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/support-v4-19.1.0-fe930dc68beb1e566675ce71b270d4091c6c249b.jar"
+        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+    <item
+        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/google-play-services-ae82961470f205ca07270a82098b49020065cae4.jar"
+        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/libs/google-play-services.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="23023656ba91dc12e963cf7d5682db5d2aba6262"/>
+    <item
+        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/classes-97c6c07d421a1a6a455832483d2ff52e9a256d2f.jar"
+        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/build/intermediates/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="06ca4ea902f14efb76284d918edb085df33cc365"/>
+    <item
+        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/android-agent-3.378.0-7a15a15ad72c4806ab7867970696e1bacfc6788c.jar"
+        jar="/Users/jarno/.gradle/caches/modules-2/files-2.1/com.newrelic.agent.android/android-agent/3.378.0/1ebf0e20081a7f1b9a5c31bfc4e7dba776e0c171/android-agent-3.378.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="1ebf0e20081a7f1b9a5c31bfc4e7dba776e0c171"/>
+    <item
+        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/classes-c8d96de3e5a9510477332f7a494dd0f5ea0d868c.jar"
+        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/build/intermediates/exploded-aar/com.github.castorflex.smoothprogressbar/library/0.4.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="6ca319f998430aa20c4dde97ba6df213d6cf3dd0"/>
+    <item
+        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/libGoogleAnalyticsServices-f745c52e67afb69add93f3d46672afd5d43f37f5.jar"
+        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/libs/libGoogleAnalyticsServices.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e887c6c9b31b39a39b0eaba981448b78902ea813"/>
+    <item
+        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/nineoldandroids-2.4.0-110fbe58acbd1d49c612b9a653eef543baef9d59.jar"
+        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/libs/nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7"/>
+    <item
+        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/signpost-core-1.2.1.2-f1e00d989fb3be2d9854b0198de6839f31feabab.jar"
+        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/libs/signpost-core-1.2.1.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="bf95955dcf3d5a78c201e49b0c336787ea73f161"/>
+    <item
+        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/classes-2adeff946aa02691b223a0aaf6be1682531e3c3c.jar"
+        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+    <item
+        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.1-with-sources-be3a51ab949bf4515a50900bc348f392e856a438.jar"
+        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/libs/universal-image-loader-1.9.1-with-sources.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="d2a1c7db3817af8381daa80201bc549be3e884c5"/>
+    <item
+        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/classes-43b55656cffad2132b4b7c142c2bf033e4a65fd5.jar"
+        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/build/intermediates/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/extra-abc/0.9.9/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="af088c6e9425de7ac4f1dbfdf2f0ec864410f0fc"/>
+
+</pre-dex-items>
