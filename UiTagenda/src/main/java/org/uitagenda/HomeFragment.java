@@ -4,6 +4,7 @@ package org.uitagenda;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -22,6 +23,12 @@ import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesClient;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.location.LocationClient;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -43,7 +50,12 @@ import uk.co.senab.actionbarpulltorefresh.library.listeners.OnRefreshListener;
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends ListFragment implements OnRefreshListener, AbsListView.OnScrollListener {
+public class HomeFragment extends ListFragment implements OnRefreshListener, AbsListView.OnScrollListener, GooglePlayServicesClient.ConnectionCallbacks,
+        GooglePlayServicesClient.OnConnectionFailedListener {
+
+    private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
+
+    Location mCurrentLocation;
 
     private PullToRefreshLayout mPullToRefreshLayout;
 
@@ -69,6 +81,8 @@ public class HomeFragment extends ListFragment implements OnRefreshListener, Abs
     TextView tvNoResults;
 
 
+    private LocationClient mLocationClient;
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -91,6 +105,9 @@ public class HomeFragment extends ListFragment implements OnRefreshListener, Abs
 
         uiTEventAdapter = new UiTEventAdapter(getActivity(), mainEventList, false, true, locationLatitude, locationLongitude);
         setListAdapter(uiTEventAdapter);
+
+        mLocationClient = new LocationClient(getActivity(), this, this);
+
     }
 
     @Override
@@ -155,10 +172,11 @@ public class HomeFragment extends ListFragment implements OnRefreshListener, Abs
 
         boolean network_enabled = locationManager.isProviderEnabled(locationProvider);
 
-        if (network_enabled) {
+        int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getActivity());
+
+        if (network_enabled && ConnectionResult.SUCCESS == resultCode) {
             setLoadingModal();
-            checkLocation();
-            locationManager.requestLocationUpdates(locationProvider, 0, 0, locationListener);
+            mLocationClient.connect();
         } else {
             tvNoResults.setText(getString(R.string.noresults_nolocation));
             listView.setEmptyView(rootView.findViewById(R.id.ll_noresults));
@@ -283,75 +301,104 @@ public class HomeFragment extends ListFragment implements OnRefreshListener, Abs
         }
     }
 
-    public class FetchEvents extends AsyncTask<Void, Void, JSONObject> {
+    @Override
+    public void onConnected(Bundle bundle) {
 
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            rootView.findViewById(R.id.ll_noresults).setVisibility(View.INVISIBLE);
-        }
+        if (!haveAlreadyReceivedCoordinates && mLocationClient.getLastLocation() != null) {
+            mCurrentLocation = mLocationClient.getLastLocation();
+            locationLatitude = mCurrentLocation.getLatitude();
+            locationLongitude = mCurrentLocation.getLongitude();
+            uiTEventAdapter.notifyDataSetChanged();
 
-        @Override
-        protected JSONObject doInBackground(Void... params) {
+            mLocationClient.disconnect();
 
-            SearchQuery searchQuery = new SearchQuery("" + locationLatitude + "," + locationLongitude);
-            String parametersURL = searchQuery.createSearchQueryHome();
+            haveAlreadyReceivedCoordinates = true;
 
-            String completeURL = getString(R.string.base_url) + parametersURL;
-
-            ApiClientOAuth task = new ApiClientOAuth(getActivity(), completeURL, start);
-            try {
-                return task.fetchData();
-            } catch (Exception e) {
-
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(JSONObject result) {
-            if (result != null) {
-                try {
-                    JSONArray resultArray = result.getJSONArray("rootObject");
-                    for (int i = 0; i < resultArray.length(); i++) {
-                        if (isCancelled()) {
-                            break;
-                        }
-
-                        if (i == 0) {
-                            totalEvents = resultArray.getJSONObject(0).getInt("Long");
-                        } else {
-                            UiTEvent newEvent = new UiTEvent(resultArray.getJSONObject(i));
-                            mainEventList.add(newEvent);
-                        }
-                    }
-
-                    uiTEventAdapter.locationLat = locationLatitude;
-                    uiTEventAdapter.locationLon = locationLongitude;
-                    uiTEventAdapter.notifyDataSetChanged();
-
-                    pbFooter.setVisibility(View.VISIBLE);
-
-                    if (totalEvents != mainEventList.size()) {
-                        loadMore = true;
-                    } else {
-                        loadMore = false;
-                        getListView().removeFooterView(pbFooter);
-                        if (start > 0) {
-                            getListView().addFooterView(tvFooter);
-                        }
-                    }
-                } catch (JSONException e) {
-                    //Toast.makeText(getActivity(), "Error: " + e, Toast.LENGTH_LONG).show();
-                    e.printStackTrace();
-                }
-                mPullToRefreshLayout.setRefreshComplete();
-            } else {
-            }
-            rootView.setVisibility(View.VISIBLE);
-            listView.setEmptyView(rootView.findViewById(R.id.ll_noresults));
-            progress.dismiss();
-            mPullToRefreshLayout.setRefreshComplete();
+            fetchEvents();
         }
     }
+
+    @Override
+    public void onDisconnected() {
+        tvNoResults.setText(getString(R.string.noresults_nolocation));
+        listView.setEmptyView(rootView.findViewById(R.id.ll_noresults));
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+        tvNoResults.setText(getString(R.string.noresults_nolocation));
+        listView.setEmptyView(rootView.findViewById(R.id.ll_noresults));
+    }
+
+public class FetchEvents extends AsyncTask<Void, Void, JSONObject> {
+
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        rootView.findViewById(R.id.ll_noresults).setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    protected JSONObject doInBackground(Void... params) {
+
+        SearchQuery searchQuery = new SearchQuery("" + locationLatitude + "," + locationLongitude);
+        String parametersURL = searchQuery.createSearchQueryHome();
+
+        String completeURL = getString(R.string.base_url) + parametersURL;
+
+        ApiClientOAuth task = new ApiClientOAuth(getActivity(), completeURL, start);
+        try {
+            return task.fetchData();
+        } catch (Exception e) {
+
+        }
+        return null;
+    }
+
+    @Override
+    protected void onPostExecute(JSONObject result) {
+        if (result != null) {
+            try {
+                JSONArray resultArray = result.getJSONArray("rootObject");
+                for (int i = 0; i < resultArray.length(); i++) {
+                    if (isCancelled()) {
+                        break;
+                    }
+
+                    if (i == 0) {
+                        totalEvents = resultArray.getJSONObject(0).getInt("Long");
+                    } else {
+                        UiTEvent newEvent = new UiTEvent(resultArray.getJSONObject(i));
+                        mainEventList.add(newEvent);
+                    }
+                }
+
+                uiTEventAdapter.locationLat = locationLatitude;
+                uiTEventAdapter.locationLon = locationLongitude;
+                uiTEventAdapter.notifyDataSetChanged();
+
+                pbFooter.setVisibility(View.VISIBLE);
+
+                if (totalEvents != mainEventList.size()) {
+                    loadMore = true;
+                } else {
+                    loadMore = false;
+                    getListView().removeFooterView(pbFooter);
+                    if (start > 0) {
+                        getListView().addFooterView(tvFooter);
+                    }
+                }
+            } catch (JSONException e) {
+                //Toast.makeText(getActivity(), "Error: " + e, Toast.LENGTH_LONG).show();
+                e.printStackTrace();
+            }
+            mPullToRefreshLayout.setRefreshComplete();
+        } else {
+        }
+        rootView.setVisibility(View.VISIBLE);
+        listView.setEmptyView(rootView.findViewById(R.id.ll_noresults));
+        progress.dismiss();
+        mPullToRefreshLayout.setRefreshComplete();
+    }
+}
 }
