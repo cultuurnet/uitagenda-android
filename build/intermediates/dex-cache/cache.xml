@@ -1,71 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<pre-dex-items>
+<items version="2" >
 
     <item
-        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/support-v4-19.1.0-fe930dc68beb1e566675ce71b270d4091c6c249b.jar"
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/com.crashlytics.sdk.android/beta/1.1.1/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="13fcdacaecfcce00c7dd129264d70da2ff195563">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-1a06372981993e60ecc742080d97c53e5afce448.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/libs/universal-image-loader-1.9.1-with-sources.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="d2a1c7db3817af8381daa80201bc549be3e884c5">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.1-with-sources-141689ea6a390bea97ff833516b2c66e209acc71.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/.gradle/caches/modules-2/files-2.1/com.newrelic.agent.android/android-agent/3.429.0/b8768558f0a577c1e8b9486879c7fa1f2be58767/android-agent-3.429.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="b8768558f0a577c1e8b9486879c7fa1f2be58767">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/android-agent-3.429.0-db691aeac39b9d9a789d0bff6d9f180d1cd25992.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/libs/libGoogleAnalyticsServices.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e887c6c9b31b39a39b0eaba981448b78902ea813">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/libGoogleAnalyticsServices-8a30df2124b5df685ee83fe95325ecfa3b821b50.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/libs/google-play-services.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="23023656ba91dc12e963cf7d5682db5d2aba6262">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/google-play-services-f1d645b68ec739bc21f6a1d95821909075a82d0d.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="06ca4ea902f14efb76284d918edb085df33cc365">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-34720c6aa488b33c6f2ab06b3406b8a42d3512c2.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/libs/signpost-core-1.2.1.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="bf95955dcf3d5a78c201e49b0c336787ea73f161">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/signpost-core-1.2.1.2-13dc724e21332b48f5c2ae708e5793ca2717f5f7.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/com.github.castorflex.smoothprogressbar/library/0.4.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="6ca319f998430aa20c4dde97ba6df213d6cf3dd0">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-9f66bf3e0bf08d1c4b9f1df463bc074d99e37bc6.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/extra-abc/0.9.9/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="af088c6e9425de7ac4f1dbfdf2f0ec864410f0fc">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-9211106ed1f94e3e43c36ca82441d9a90107135c.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.1.1/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="12a82f51a488d577e124fd6038ff3b533311d4b9">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-438d39048652c1d5a735d08f1b42b8aead82135c.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.2.1/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="7c9c3b5f5f093c43123e905d97d6a06373393afa">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-96f9b8a5c7276a0a009a9bb04d7f8509304458bc.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-bfeb5314427040a81bffe18da44eff7870b65753.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/libs/nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/nineoldandroids-2.4.0-3432c4b9f764dc084ee9544e9f547dc649f1d041.jar" />
+    </item>
+    <item
         jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/support-v4-19.1.0-fe930dc68beb1e566675ce71b270d4091c6c249b.jar" />
+    </item>
     <item
-        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/classes-3c53f27fcbadd742282d678bf544fb3566ee768e.jar"
-        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.1.1/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
-    <item
-        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/google-play-services-ae82961470f205ca07270a82098b49020065cae4.jar"
-        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/libs/google-play-services.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="23023656ba91dc12e963cf7d5682db5d2aba6262"/>
-    <item
-        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/classes-6faa34f5e70d959ca4532ff630da77764258e783.jar"
-        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="06ca4ea902f14efb76284d918edb085df33cc365"/>
-    <item
-        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/classes-f1d17d147dfa8d12234f6a7635ac571e90b37615.jar"
-        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/exploded-aar/com.github.castorflex.smoothprogressbar/library/0.4.0/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="6ca319f998430aa20c4dde97ba6df213d6cf3dd0"/>
-    <item
-        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/android-agent-3.429.0-6f31067d6bd02f9101f348d3804cbfbac2124050.jar"
-        jar="/Users/jarno/.gradle/caches/modules-2/files-2.1/com.newrelic.agent.android/android-agent/3.429.0/b8768558f0a577c1e8b9486879c7fa1f2be58767/android-agent-3.429.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="b8768558f0a577c1e8b9486879c7fa1f2be58767"/>
-    <item
-        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/classes-e28a35375a128e8353a037ddd2662c65a7878c8f.jar"
-        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/extra-abc/0.9.9/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="af088c6e9425de7ac4f1dbfdf2f0ec864410f0fc"/>
-    <item
-        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/libGoogleAnalyticsServices-f745c52e67afb69add93f3d46672afd5d43f37f5.jar"
-        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/libs/libGoogleAnalyticsServices.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="e887c6c9b31b39a39b0eaba981448b78902ea813"/>
-    <item
-        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/nineoldandroids-2.4.0-110fbe58acbd1d49c612b9a653eef543baef9d59.jar"
-        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/libs/nineoldandroids-2.4.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7"/>
-    <item
-        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/signpost-core-1.2.1.2-f1e00d989fb3be2d9854b0198de6839f31feabab.jar"
-        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/libs/signpost-core-1.2.1.2.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="bf95955dcf3d5a78c201e49b0c336787ea73f161"/>
-    <item
-        dex="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.1-with-sources-be3a51ab949bf4515a50900bc348f392e856a438.jar"
-        jar="/Users/jarno/Documents/Appreciate/Applications_Android/cultuurnet-uitagenda-android/UiTagenda/libs/universal-image-loader-1.9.1-with-sources.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="d2a1c7db3817af8381daa80201bc549be3e884c5"/>
+        sha1="bb47ba58ffd67d44cd9e5cc6761cac747b4a6acf">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-3e792126e84cd8e24e624ce8b3cc4d72f401f27e.jar" />
+    </item>
 
-</pre-dex-items>
+</items>

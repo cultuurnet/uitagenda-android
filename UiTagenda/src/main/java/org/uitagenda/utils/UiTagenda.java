@@ -10,11 +10,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.crashlytics.android.Crashlytics;
 import com.google.analytics.tracking.android.EasyTracker;
 import com.google.analytics.tracking.android.Fields;
 import com.google.analytics.tracking.android.MapBuilder;
 import com.google.analytics.tracking.android.Tracker;
 
+import io.fabric.sdk.android.Fabric;
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -40,6 +42,7 @@ public class UiTagenda extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Fabric.with(this, new Crashlytics());
 
         fontFaceRegular = Typeface.createFromAsset(getApplicationContext().getAssets(), "PTN57F.ttf");
         fontFaceBold = Typeface.createFromAsset(getApplicationContext().getAssets(), "PTN77F.ttf");
