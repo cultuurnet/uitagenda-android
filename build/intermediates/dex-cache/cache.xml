@@ -16,18 +16,39 @@
         <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.1-with-sources-141689ea6a390bea97ff833516b2c66e209acc71.jar" />
     </item>
     <item
-        jar="/Users/robgel/.gradle/caches/modules-2/files-2.1/com.newrelic.agent.android/android-agent/3.429.0/b8768558f0a577c1e8b9486879c7fa1f2be58767/android-agent-3.429.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="b8768558f0a577c1e8b9486879c7fa1f2be58767">
-        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/android-agent-3.429.0-db691aeac39b9d9a789d0bff6d9f180d1cd25992.jar" />
-    </item>
-    <item
         jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/libs/libGoogleAnalyticsServices.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="e887c6c9b31b39a39b0eaba981448b78902ea813">
         <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/libGoogleAnalyticsServices-8a30df2124b5df685ee83fe95325ecfa3b821b50.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.1.1/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="12a82f51a488d577e124fd6038ff3b533311d4b9">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-438d39048652c1d5a735d08f1b42b8aead82135c.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-bfeb5314427040a81bffe18da44eff7870b65753.jar" />
+    </item>
+    <item
+        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/support-v4-19.1.0-fe930dc68beb1e566675ce71b270d4091c6c249b.jar" />
+    </item>
+    <item
+        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.1.1/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="bb47ba58ffd67d44cd9e5cc6761cac747b4a6acf">
+        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-3e792126e84cd8e24e624ce8b3cc4d72f401f27e.jar" />
     </item>
     <item
         jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/libs/google-play-services.jar"
@@ -65,13 +86,6 @@
         <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-9211106ed1f94e3e43c36ca82441d9a90107135c.jar" />
     </item>
     <item
-        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.1.1/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="12a82f51a488d577e124fd6038ff3b533311d4b9">
-        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-438d39048652c1d5a735d08f1b42b8aead82135c.jar" />
-    </item>
-    <item
         jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.2.1/classes.jar"
         jumboMode="false"
         revision="19.1.0"
@@ -79,32 +93,11 @@
         <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-96f9b8a5c7276a0a009a9bb04d7f8509304458bc.jar" />
     </item>
     <item
-        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
-        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-bfeb5314427040a81bffe18da44eff7870b65753.jar" />
-    </item>
-    <item
         jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/libs/nineoldandroids-2.4.0.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
         <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/nineoldandroids-2.4.0-3432c4b9f764dc084ee9544e9f547dc649f1d041.jar" />
-    </item>
-    <item
-        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/support-v4-19.1.0-fe930dc68beb1e566675ce71b270d4091c6c249b.jar" />
-    </item>
-    <item
-        jar="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.1.1/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="bb47ba58ffd67d44cd9e5cc6761cac747b4a6acf">
-        <dex dex="/Users/robgel/Desktop/Appreciate/werk/UitAgendaAndroid/UiTagenda/build/intermediates/pre-dexed/debug/classes-3e792126e84cd8e24e624ce8b3cc4d72f401f27e.jar" />
     </item>
 
 </items>
