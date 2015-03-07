@@ -346,11 +346,13 @@ public class FetchEvents extends AsyncTask<Void, Void, JSONObject> {
 
         String completeURL = getString(R.string.base_url) + parametersURL;
 
-        ApiClientOAuth task = new ApiClientOAuth(getActivity(), completeURL, start);
-        try {
-            return task.fetchData();
-        } catch (Exception e) {
+        if(getActivity() != null && !getActivity().isFinishing()) {
+            ApiClientOAuth task = new ApiClientOAuth(getActivity(), completeURL, start);
+            try {
+                return task.fetchData();
+            } catch (Exception e) {
 
+            }
         }
         return null;
     }
@@ -393,8 +395,8 @@ public class FetchEvents extends AsyncTask<Void, Void, JSONObject> {
                 e.printStackTrace();
             }
             mPullToRefreshLayout.setRefreshComplete();
-        } else {
         }
+
         rootView.setVisibility(View.VISIBLE);
         listView.setEmptyView(rootView.findViewById(R.id.ll_noresults));
         progress.dismiss();
