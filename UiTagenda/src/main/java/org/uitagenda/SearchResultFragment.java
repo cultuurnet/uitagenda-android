@@ -133,9 +133,8 @@ public class SearchResultFragment extends Fragment implements AbsListView.OnScro
 
         setupProgressBar();
 
-        throw new RuntimeException("This is a crash");
 
-       // return rootView;
+       return rootView;
     }
 
     private void setupSaveQueryView(View rootView) {
