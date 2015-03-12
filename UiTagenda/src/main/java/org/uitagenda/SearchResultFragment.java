@@ -10,6 +10,7 @@ import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -33,6 +34,7 @@ import org.uitagenda.model.UiTEvent;
 import org.uitagenda.utils.UiTEventAdapter;
 import org.uitagenda.utils.UiTSearchDataSource;
 import org.uitagenda.utils.UiTagenda;
+import com.crashlytics.android.Crashlytics;
 
 import java.util.ArrayList;
 
@@ -85,6 +87,7 @@ public class SearchResultFragment extends Fragment implements AbsListView.OnScro
                              Bundle savedInstanceState) {
 
         UiTagenda.trackGoogleAnalytics(getActivity(), "Android: Zoeken");
+        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
 
         rootView = inflater.inflate(R.layout.fragment_searchresults, container, false);
 
@@ -105,7 +108,12 @@ public class SearchResultFragment extends Fragment implements AbsListView.OnScro
         searchQuery = getActivity().getIntent().getExtras().getString("searchQuery");
         saveSearchString = getActivity().getIntent().getExtras().getString("saveQueryString");
 
-            setupSaveQueryView(rootView);
+        Crashlytics.log("checkCurrentLocation :" + checkCurrentLocation);
+        Crashlytics.log("queryAlreadySaved :" + queryAlreadySaved);
+        Crashlytics.log("searchQuery :" + searchQuery);
+        Crashlytics.log("saveSearchString :" + saveSearchString);
+
+        setupSaveQueryView(rootView);
 
         listView.setOnScrollListener(this);
 
@@ -125,7 +133,9 @@ public class SearchResultFragment extends Fragment implements AbsListView.OnScro
 
         setupProgressBar();
 
-        return rootView;
+        throw new RuntimeException("This is a crash");
+
+       // return rootView;
     }
 
     private void setupSaveQueryView(View rootView) {
@@ -306,7 +316,10 @@ public class SearchResultFragment extends Fragment implements AbsListView.OnScro
                 completeURL = getString(R.string.base_url) + searchQuery + "&pt=" + locationLatitude + "," + locationLongitude + "";
             } else {
                 completeURL = getString(R.string.base_url) + searchQuery;
+
             }
+
+            Crashlytics.log("completeUrl :" + completeURL);
 
             ApiClientOAuth task = new ApiClientOAuth(getActivity(), completeURL, start);
             try {
@@ -322,6 +335,7 @@ public class SearchResultFragment extends Fragment implements AbsListView.OnScro
             if (result != null) {
                 try {
                     JSONArray resultArray = result.getJSONArray("rootObject");
+
                     for (int i = 0; i < resultArray.length(); i++) {
                         if (isCancelled()) {
                             break;
@@ -334,6 +348,7 @@ public class SearchResultFragment extends Fragment implements AbsListView.OnScro
                             }
                         } else {
                             UiTEvent newEvent = new UiTEvent(resultArray.getJSONObject(i));
+
                             eventList.add(newEvent);
                         }
                     }

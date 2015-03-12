@@ -24,6 +24,7 @@ import android.widget.TextView;
 
 import com.google.analytics.tracking.android.EasyTracker;
 import com.google.analytics.tracking.android.MapBuilder;
+import com.crashlytics.android.Crashlytics;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -88,6 +89,7 @@ public class SearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         UiTagenda.trackGoogleAnalytics(getActivity(), "Android: Zoeken");
+        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
 
         View rootView = inflater.inflate(R.layout.fragment_search, container, false);
 
@@ -187,6 +189,8 @@ public class SearchFragment extends Fragment {
                                                      cb_noCourses.isChecked());
 
                                              String searchString = newSearchQuery.createSearchQueryFilter();
+
+                                             Crashlytics.log("searchString" + searchString);
 
                                              Intent intent = new Intent(getActivity().getApplicationContext(), SearchResultActivity.class);
                                              intent.putExtra("currentLocation", checkCurrentLocation);

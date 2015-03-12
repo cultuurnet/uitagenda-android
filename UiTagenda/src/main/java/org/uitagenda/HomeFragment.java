@@ -38,6 +38,7 @@ import org.uitagenda.model.SearchQuery;
 import org.uitagenda.model.UiTEvent;
 import org.uitagenda.utils.UiTEventAdapter;
 import org.uitagenda.utils.UiTagenda;
+import com.crashlytics.android.Crashlytics;
 
 import java.util.ArrayList;
 
@@ -125,6 +126,7 @@ public class HomeFragment extends ListFragment implements OnRefreshListener, Abs
                              Bundle savedInstanceState) {
 
         UiTagenda.trackGoogleAnalytics(getActivity(), "Android: Home");
+        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
 
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_home, container, false);
@@ -345,6 +347,7 @@ public class FetchEvents extends AsyncTask<Void, Void, JSONObject> {
         String parametersURL = searchQuery.createSearchQueryHome();
 
         String completeURL = getString(R.string.base_url) + parametersURL;
+        Crashlytics.log("completeUrl :" + completeURL);
 
         if(getActivity() != null && !getActivity().isFinishing()) {
             ApiClientOAuth task = new ApiClientOAuth(getActivity(), completeURL, start);
@@ -362,6 +365,7 @@ public class FetchEvents extends AsyncTask<Void, Void, JSONObject> {
         if (result != null) {
             try {
                 JSONArray resultArray = result.getJSONArray("rootObject");
+
                 for (int i = 0; i < resultArray.length(); i++) {
                     if (isCancelled()) {
                         break;
@@ -371,6 +375,8 @@ public class FetchEvents extends AsyncTask<Void, Void, JSONObject> {
                         totalEvents = resultArray.getJSONObject(0).getInt("Long");
                     } else {
                         UiTEvent newEvent = new UiTEvent(resultArray.getJSONObject(i));
+
+
                         mainEventList.add(newEvent);
                     }
                 }

@@ -24,6 +24,7 @@ import org.uitagenda.model.UiTEvent;
 import org.uitagenda.utils.UiTEventAdapter;
 import org.uitagenda.utils.UiTFavoriteDataSource;
 import org.uitagenda.utils.UiTagenda;
+import com.crashlytics.android.Crashlytics;
 
 import java.util.ArrayList;
 
@@ -88,6 +89,7 @@ public class FavoritesFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         UiTagenda.trackGoogleAnalytics(getActivity(), "Android: Favorieten");
+        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
 
         rootView = inflater.inflate(R.layout.fragment_favorites, container, false);
 
@@ -145,6 +147,7 @@ public class FavoritesFragment extends Fragment {
             String parametersURL = searchQuery.createSearchQueryFavorites();
 
             String completeURL = getString(R.string.base_url) + parametersURL;
+            Crashlytics.log("url" + completeURL);
 
             ApiClientOAuth task = new ApiClientOAuth(getActivity(), completeURL, 0);
             try {

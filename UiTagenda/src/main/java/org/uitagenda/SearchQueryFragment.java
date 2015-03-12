@@ -15,6 +15,7 @@ import org.uitagenda.utils.SwipeDismissListViewTouchListener;
 import org.uitagenda.utils.UiTSearchDataSource;
 import org.uitagenda.utils.UiTSearchQueryAdapter;
 import org.uitagenda.utils.UiTagenda;
+import com.crashlytics.android.Crashlytics;
 
 import java.util.ArrayList;
 
@@ -55,6 +56,7 @@ public class SearchQueryFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         UiTagenda.trackGoogleAnalytics(getActivity(), "Android: Zoekopdrachten");
+        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
 
         View rootView = inflater.inflate(R.layout.fragment_search_query, container, false);
 

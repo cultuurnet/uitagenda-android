@@ -12,6 +12,7 @@ import android.widget.Toast;
 import org.json.JSONObject;
 import org.uitagenda.apiclient.ApiClient;
 import org.uitagenda.utils.UiTagenda;
+import com.crashlytics.android.Crashlytics;
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass.
@@ -48,6 +49,8 @@ public class AboutFragment extends Fragment {
 
         UiTagenda.trackGoogleAnalytics(getActivity(), "Android: Over");
 
+        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
+
         View view = inflater.inflate(R.layout.fragment_about, container, false);
 
         if (UiTagenda.isNetworkAvailable()) {
@@ -79,6 +82,9 @@ public class AboutFragment extends Fragment {
 
             try {
                 JSONObject aboutJson = apiClient.makeHttpRequest(getString(R.string.about_url), "GET");
+
+                Crashlytics.log(aboutJson.getString("appinfo"));
+
                 return aboutJson.getString("appinfo");
             } catch (Exception e) {
                 e.printStackTrace();
