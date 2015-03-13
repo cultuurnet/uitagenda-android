@@ -97,7 +97,7 @@ public class AboutFragment extends Fragment {
             super.onPostExecute(s);
             if (s != null) {
                 tvAbout.setText(s);
-            } else {
+            } else if(getActivity() != null && !getActivity().isFinishing()) {
                 Toast.makeText(getActivity(), getString(R.string.error), Toast.LENGTH_LONG).show();
             }
         }

@@ -370,7 +370,9 @@ public class SearchResultFragment extends Fragment implements AbsListView.OnScro
                         }
                     }
                 } catch (JSONException e) {
-                    Toast.makeText(getActivity(), getString(R.string.error), Toast.LENGTH_LONG).show();
+                    if(getActivity() != null && !getActivity().isFinishing()) {
+                        Toast.makeText(getActivity(), getString(R.string.error), Toast.LENGTH_LONG).show();
+                    }
                     e.printStackTrace();
                 }
             } else {
