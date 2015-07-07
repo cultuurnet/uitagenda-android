@@ -1,6 +1,5 @@
 package org.uitagenda;
 
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -88,10 +87,10 @@ public class SearchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        UiTagenda.trackGoogleAnalytics(getActivity(), "Android: Zoeken");
-        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
-
         View rootView = inflater.inflate(R.layout.fragment_search, container, false);
+
+        UiTagenda.trackGoogleAnalytics(rootView.getContext(), "Android: Zoeken");
+        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
 
         selectedWhere = "0000";
         selectedRadius = "10";
@@ -115,91 +114,92 @@ public class SearchFragment extends Fragment {
         createWhenMap();
 
         Button btnSearch = (Button) rootView.findViewById(R.id.btn_search);
-        btnSearch.setOnClickListener(new View.OnClickListener() {
-                                         @Override
-                                         public void onClick(View view) {
-                                             // radius selected, but no where
+        btnSearch.setOnClickListener(
+                new View.OnClickListener() {
+                     @Override
+                     public void onClick(View view) {
+                         // radius selected, but no where
 
-                                             // Create SaveQueryString
-                                             ArrayList<String> saveQuery = new ArrayList<String>();
-                                             if (!et_searchTerm.getText().toString().matches("")) {
-                                                 saveQuery.add(et_searchTerm.getText().toString());
-                                                 EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Zoekveld", et_searchTerm.getText().toString(), null).build());
-                                             }
-                                             if (!tv_where.getText().toString().matches("")) {
-                                                 saveQuery.add(tv_where.getText().toString());
-                                                 EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Waar", tv_where.getText().toString(), null).build());
-                                             }
-                                             if (!tv_radius.getText().toString().matches("")) {
-                                                 saveQuery.add(tv_radius.getText().toString());
-                                                 EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Straal", tv_radius.getText().toString().replace(" km", ""), null).build());
-                                             }
-                                             if (!tv_when.getText().toString().matches("")) {
-                                                 saveQuery.add(tv_when.getText().toString());
-                                                 EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Wanneer", tv_when.getText().toString(), null).build());
-                                             }
-                                             if (!tv_what.getText().toString().matches("")) {
-                                                 saveQuery.add(tv_what.getText().toString());
+                         // Create SaveQueryString
+                         ArrayList<String> saveQuery = new ArrayList<String>();
+                         if (!et_searchTerm.getText().toString().matches("")) {
+                             saveQuery.add(et_searchTerm.getText().toString());
+                             EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Zoekveld", et_searchTerm.getText().toString(), null).build());
+                         }
+                         if (!tv_where.getText().toString().matches("")) {
+                             saveQuery.add(tv_where.getText().toString());
+                             EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Waar", tv_where.getText().toString(), null).build());
+                         }
+                         if (!tv_radius.getText().toString().matches("")) {
+                             saveQuery.add(tv_radius.getText().toString());
+                             EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Straal", tv_radius.getText().toString().replace(" km", ""), null).build());
+                         }
+                         if (!tv_when.getText().toString().matches("")) {
+                             saveQuery.add(tv_when.getText().toString());
+                             EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Wanneer", tv_when.getText().toString(), null).build());
+                         }
+                         if (!tv_what.getText().toString().matches("")) {
+                             saveQuery.add(tv_what.getText().toString());
 
-                                                 String[] eventTypes = tv_what.getText().toString().split(", ", -1);
-                                                 for (String eventType : eventTypes) {
-                                                     EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Wat", eventType, null).build());
-                                                 }
+                             String[] eventTypes = tv_what.getText().toString().split(", ", -1);
+                             for (String eventType : eventTypes) {
+                                 EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Wat", eventType, null).build());
+                             }
 
-                                             }
-                                             if (cb_kids.isChecked()) {
-                                                 saveQuery.add("Enkel voor kinderen");
-                                                 EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Extra zoekcriteria", "Enkel voor kinderen", null).build());
-                                             }
-                                             if (cb_free.isChecked()) {
-                                                 saveQuery.add("Enkel gratis");
-                                                 EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Extra zoekcriteria", "Enkel gratis", null).build());
-                                             }
-                                             if (cb_noCourses.isChecked()) {
-                                                 saveQuery.add("Geen cursussen en workshops");
-                                                 EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Extra zoekcriteria", "Geen cursussen en workshops", null).build());
-                                             } else {
-                                             }
+                         }
+                         if (cb_kids.isChecked()) {
+                             saveQuery.add("Enkel voor kinderen");
+                             EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Extra zoekcriteria", "Enkel voor kinderen", null).build());
+                         }
+                         if (cb_free.isChecked()) {
+                             saveQuery.add("Enkel gratis");
+                             EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Extra zoekcriteria", "Enkel gratis", null).build());
+                         }
+                         if (cb_noCourses.isChecked()) {
+                             saveQuery.add("Geen cursussen en workshops");
+                             EasyTracker.getInstance(getActivity()).send(MapBuilder.createEvent("Uitgebreid zoeken", "Android: Extra zoekcriteria", "Geen cursussen en workshops", null).build());
+                         } else {
+                         }
 
 
-                                             String saveQueryString = TextUtils.join(" - ", saveQuery);
+                         String saveQueryString = TextUtils.join(" - ", saveQuery);
 
-                  /*  if (saveQueryString.length() > 40) {
-                        saveQueryString = saveQueryString.substring(0, 40) + "...";
-                    }*/
+                        /*if (saveQueryString.length() > 40) {
+                            saveQueryString = saveQueryString.substring(0, 40) + "...";
+                        }*/
 
-                                             boolean checkCurrentLocation = false;
-                                             if (selectedWhere.equals("0000")) {
-                                                 checkCurrentLocation = true;
-                                             }
+                         boolean checkCurrentLocation = false;
+                         if (selectedWhere.equals("0000")) {
+                             checkCurrentLocation = true;
+                         }
 
-                                             if (selectedWhere.equals("000000")) {
-                                                 selectedWhere = "";
-                                             }
+                         if (selectedWhere.equals("000000")) {
+                             selectedWhere = "";
+                         }
 
-                                             SearchQuery newSearchQuery = new SearchQuery(
-                                                     checkCurrentLocation,
-                                                     et_searchTerm.getText().toString(),
-                                                     selectedWhere,
-                                                     selectedRadius,
-                                                     selectedWhen,
-                                                     selectedWhat,
-                                                     cb_kids.isChecked(),
-                                                     cb_free.isChecked(),
-                                                     cb_noCourses.isChecked());
+                         SearchQuery newSearchQuery = new SearchQuery(
+                                 checkCurrentLocation,
+                                 et_searchTerm.getText().toString(),
+                                 selectedWhere,
+                                 selectedRadius,
+                                 selectedWhen,
+                                 selectedWhat,
+                                 cb_kids.isChecked(),
+                                 cb_free.isChecked(),
+                                 cb_noCourses.isChecked());
 
-                                             String searchString = newSearchQuery.createSearchQueryFilter();
+                         String searchString = newSearchQuery.createSearchQueryFilter();
 
-                                             Crashlytics.log("searchString" + searchString);
+                         Crashlytics.log("searchString" + searchString);
 
-                                             Intent intent = new Intent(getActivity().getApplicationContext(), SearchResultActivity.class);
-                                             intent.putExtra("currentLocation", checkCurrentLocation);
-                                             intent.putExtra("queryAlreadySaved", false);
-                                             intent.putExtra("searchQuery", searchString);
-                                             intent.putExtra("saveQueryString", saveQueryString);
-                                             startActivity(intent);
-                                         }
-                                     }
+                         Intent intent = new Intent(getActivity().getApplicationContext(), SearchResultActivity.class);
+                         intent.putExtra("currentLocation", checkCurrentLocation);
+                         intent.putExtra("queryAlreadySaved", false);
+                         intent.putExtra("searchQuery", searchString);
+                         intent.putExtra("saveQueryString", saveQueryString);
+                         startActivity(intent);
+                     }
+                }
         );
 
         return rootView;

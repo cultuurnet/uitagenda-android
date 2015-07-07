@@ -32,21 +32,18 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-
 /**
  * Created by alexf_000 on 1/13/14.
  */
 public class UiTEventAdapter extends BaseAdapter {
 
-    private static final String TAG = "UiTMainListAdapter";
-
     private final Context context;
-    public final ArrayList<UiTEvent> mainList;
+    private final ArrayList<UiTEvent> mainList;
     private final boolean isFavorite;
     private final boolean isCurrentLocation;
 
-    protected ImageLoader imageLoader;
-    DisplayImageOptions options;
+    private ImageLoader imageLoader;
+    private DisplayImageOptions options;
 
     private UiTFavoriteDataSource favoriteDS;
 
@@ -205,7 +202,7 @@ public class UiTEventAdapter extends BaseAdapter {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(context.getApplicationContext(), DetailActivity.class);
-Bundle bundle = new Bundle();
+                    Bundle bundle = new Bundle();
                     bundle.putSerializable("list", mainList);
                     intent.putExtra("bundle", bundle);
                     intent.putExtra("positionInList", position);

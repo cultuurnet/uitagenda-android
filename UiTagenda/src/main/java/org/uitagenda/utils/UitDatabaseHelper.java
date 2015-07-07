@@ -29,12 +29,11 @@ public class UitDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "";
-        sql += "CREATE TABLE IF NOT EXISTS " + SEARCH_TABLE + " (";
-        sql += SEARCH_TITLE + " TEXT PRIMARY KEY ,";
-        sql += SEARCH_URL + " TEXT ,";
-        sql += SEARCH_CURRENTLOCATION + " BOOLEAN DEFAULT 'FALSE' ";
-        sql += ")";
+        String sql = "CREATE TABLE IF NOT EXISTS " + SEARCH_TABLE + " ("
+                + SEARCH_TITLE + " TEXT PRIMARY KEY ,"
+                + SEARCH_URL + " TEXT ,"
+                + SEARCH_CURRENTLOCATION + " BOOLEAN DEFAULT 'FALSE' "
+                + ")";
 
         db.execSQL(sql);
 

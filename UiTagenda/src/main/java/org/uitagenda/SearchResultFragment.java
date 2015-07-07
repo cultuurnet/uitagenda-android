@@ -86,10 +86,10 @@ public class SearchResultFragment extends Fragment implements AbsListView.OnScro
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        UiTagenda.trackGoogleAnalytics(getActivity(), "Android: Zoeken");
-        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
-
         rootView = inflater.inflate(R.layout.fragment_searchresults, container, false);
+
+        UiTagenda.trackGoogleAnalytics(rootView.getContext(), "Android: Zoeken");
+        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
 
         listView = (ListView) rootView.findViewById(R.id.lv_searchresults);
 

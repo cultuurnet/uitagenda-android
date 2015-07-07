@@ -24,7 +24,6 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.SortedMap;
 import java.util.TreeMap;
@@ -86,10 +85,7 @@ public class UiTagenda extends Application {
     public static boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        if (activeNetworkInfo != null && activeNetworkInfo.isConnected()) {
-            return true;
-        }
-        return false;
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
     public static SortedMap<String, String> getEventTypes(JSONArray arrayWithTypes) {
@@ -110,8 +106,6 @@ public class UiTagenda extends Application {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-        Iterator iter = eventTypes.keySet().iterator();
 
         return eventTypes;
     }
@@ -138,8 +132,6 @@ public class UiTagenda extends Application {
         } catch (JSONException e) {
 
         }
-
-        Iterator iter = flandersRegion.values().iterator();
 
         return flandersRegion;
     }

@@ -125,11 +125,11 @@ public class HomeFragment extends ListFragment implements OnRefreshListener, Abs
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        UiTagenda.trackGoogleAnalytics(getActivity(), "Android: Home");
-        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
-
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_home, container, false);
+
+        UiTagenda.trackGoogleAnalytics(rootView.getContext(), "Android: Home");
+        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
 
         listView = (ListView) rootView.findViewById(android.R.id.list);
         listView.setOnScrollListener(this);

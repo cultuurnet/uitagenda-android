@@ -13,7 +13,7 @@ public class UiTSettingsListAdapter extends ArrayAdapter<UiTSettingsItem> {
 	private LayoutInflater mInflater;
 
 	public enum RowType {
-		LIST_ITEM, HEADER_ITEM;
+		LIST_ITEM, HEADER_ITEM
 	}
 
 	public UiTSettingsListAdapter(Context context, List<UiTSettingsItem> items) {
@@ -24,7 +24,6 @@ public class UiTSettingsListAdapter extends ArrayAdapter<UiTSettingsItem> {
 	@Override
 	public int getViewTypeCount() {
 		return RowType.values().length;
-
 	}
 
 	@Override

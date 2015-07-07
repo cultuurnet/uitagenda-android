@@ -55,10 +55,10 @@ public class SearchQueryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        UiTagenda.trackGoogleAnalytics(getActivity(), "Android: Zoekopdrachten");
-        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
-
         View rootView = inflater.inflate(R.layout.fragment_search_query, container, false);
+
+        UiTagenda.trackGoogleAnalytics(rootView.getContext(), "Android: Zoekopdrachten");
+        Crashlytics.setString("ClassName", this.getClass().getSimpleName());
 
         searchDS = new UiTSearchDataSource(getActivity());
 

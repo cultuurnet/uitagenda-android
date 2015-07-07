@@ -44,7 +44,6 @@ public class FavoritesFragment extends Fragment {
 
     ProgressDialog progress;
     ProgressBar progressBar;
-    View rootView;
     ListView listView;
     LinearLayout llNoResults;
     TextView tvNoResults;
@@ -85,25 +84,23 @@ public class FavoritesFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        UiTagenda.trackGoogleAnalytics(getActivity(), "Android: Favorieten");
+        View view = inflater.inflate(R.layout.fragment_favorites, container, false);
+
+        UiTagenda.trackGoogleAnalytics(view.getContext(), "Android: Favorieten");
         Crashlytics.setString("ClassName", this.getClass().getSimpleName());
 
-        rootView = inflater.inflate(R.layout.fragment_favorites, container, false);
+        listView = (ListView) view.findViewById(R.id.lv_favorites);
+        tvNoResults = (TextView) view.findViewById(R.id.tv_noresults);
+        llNoResults = (LinearLayout) view.findViewById(R.id.ll_noresults);
 
-        listView = (ListView) rootView.findViewById(R.id.lv_favorites);
-
-        uiTEventAdapter = new UiTEventAdapter(getActivity(), mainEventList, true, false, 0, 0);
+        uiTEventAdapter = new UiTEventAdapter(view.getContext(), mainEventList, true, false, 0, 0);
         listView.setAdapter(uiTEventAdapter);
 
-        tvNoResults = (TextView) rootView.findViewById(R.id.tv_noresults);
-
-        llNoResults = (LinearLayout) rootView.findViewById(R.id.ll_noresults);
-
         checkFetchEvents();
-        return rootView;
+
+        return view;
     }
 
     private void checkFetchEvents() {

@@ -47,11 +47,11 @@ public class AboutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        UiTagenda.trackGoogleAnalytics(getActivity(), "Android: Over");
+        View view = inflater.inflate(R.layout.fragment_about, container, false);
+
+        UiTagenda.trackGoogleAnalytics(view.getContext(), "Android: Over");
 
         Crashlytics.setString("ClassName", this.getClass().getSimpleName());
-
-        View view = inflater.inflate(R.layout.fragment_about, container, false);
 
         if (UiTagenda.isNetworkAvailable()) {
             GetAboutData getAboutData = new GetAboutData();
@@ -97,7 +97,7 @@ public class AboutFragment extends Fragment {
             super.onPostExecute(s);
             if (s != null) {
                 tvAbout.setText(s);
-            } else if(getActivity() != null && !getActivity().isFinishing()) {
+            } else if(getActivity() != null && !getActivity().isFinishing() && isAdded()) {
                 Toast.makeText(getActivity(), getString(R.string.error), Toast.LENGTH_LONG).show();
             }
         }
