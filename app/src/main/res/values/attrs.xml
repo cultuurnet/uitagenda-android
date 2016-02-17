@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="typeface" format="enum">
+        <enum name="REGULAR" value="1"/>
+        <enum name="BOLD" value="2"/>
+    </attr>
+
+    <declare-styleable name="TextView">
+        <attr name="typeface"/>
+    </declare-styleable>
+
+    <declare-styleable name="Button">
+        <attr name="typeface"/>
+    </declare-styleable>
+
+    <declare-styleable name="EditText">
+        <attr name="typeface"/>
+    </declare-styleable>
+
+    <declare-styleable name="CheckBox">
+        <attr name="typeface"/>
+    </declare-styleable>
+
+</resources>

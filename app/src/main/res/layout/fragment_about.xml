@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/general_fragment_padding"
+    android:clipToPadding="false"
+    android:scrollbarStyle="outsideOverlay">
+
+    <org.uitagenda.views.TextView
+        android:id="@+id/textView_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:textColorLink="@color/general_text_accent"/>
+
+</ScrollView>

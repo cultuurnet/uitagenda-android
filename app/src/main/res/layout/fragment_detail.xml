@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/list_padding"
+    android:scrollbarStyle="outsideOverlay"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/list_item_margin_vertical"
+            android:layout_marginBottom="@dimen/list_item_margin_vertical"
+            android:layout_marginLeft="@dimen/list_item_margin_horizontal"
+            android:layout_marginRight="@dimen/list_item_margin_horizontal"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="@dimen/list_item_elevation"
+            app:cardMaxElevation="@dimen/list_item_max_elevation"
+            app:cardCornerRadius="@dimen/list_item_corner_radius"
+            app:cardPreventCornerOverlap="true"
+            app:cardBackgroundColor="@color/list_item_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/detail_image_height"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/imageView_overlay"
+                    android:layout_width="@dimen/detail_overlay"
+                    android:layout_height="@dimen/detail_overlay"
+                    android:layout_alignTop="@id/imageView_event"
+                    android:layout_alignLeft="@id/imageView_event"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/overlay_kids"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/list_item_padding"
+                    android:layout_below="@id/imageView_event">
+
+                    <org.uitagenda.views.TextView
+                        android:id="@+id/textView_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/general_view_spacing"
+                        app:typeface="BOLD"
+                        style="@style/UitAgenda.TextView.Title.Large"/>
+                    
+                    <LinearLayout
+                        android:id="@+id/layout_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        
+                        <ImageView
+                            android:layout_width="@dimen/detail_icon"
+                            android:layout_height="@dimen/detail_icon"
+                            android:src="@drawable/ic_category"
+                            android:layout_marginRight="@dimen/detail_icon_margin_right"/>
+
+                        <org.uitagenda.views.TextView
+                            android:id="@+id/textView_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/UitAgenda.TextView.Light"/>
+                        
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/layout_calendarAndAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/list_padding"
+            android:padding="@dimen/list_item_padding">
+
+            <LinearLayout
+                android:id="@+id/layout_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/general_view_spacing">
+
+                <ImageView
+                    android:layout_width="@dimen/detail_icon"
+                    android:layout_height="@dimen/detail_icon"
+                    android:src="@drawable/ic_calendar"
+                    android:layout_marginRight="@dimen/detail_icon_margin_right"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/detail_icon"
+                    android:layout_height="@dimen/detail_icon"
+                    android:src="@drawable/ic_location"
+                    android:layout_marginRight="@dimen/detail_icon_margin_right"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/list_item_margin_vertical"
+            android:layout_marginBottom="@dimen/list_item_margin_vertical"
+            android:layout_marginLeft="@dimen/list_item_margin_horizontal"
+            android:layout_marginRight="@dimen/list_item_margin_horizontal"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="@dimen/list_item_elevation"
+            app:cardMaxElevation="@dimen/list_item_max_elevation"
+            app:cardCornerRadius="@dimen/list_item_corner_radius"
+            app:cardPreventCornerOverlap="true"
+            app:cardBackgroundColor="@color/list_item_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/list_item_padding">
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_shortDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+                <View
+                    android:id="@+id/divider_shortDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/general_divider_height"
+                    android:background="@color/general_divider"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_organiserTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_organiser"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    app:typeface="BOLD"
+                    style="@style/UitAgenda.TextView.Title"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_organiser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+                <View
+                    android:id="@+id/divider_organiser"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/general_divider_height"
+                    android:background="@color/general_divider"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_contactTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_contact"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    app:typeface="BOLD"
+                    style="@style/UitAgenda.TextView.Title"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    android:textColorLink="@color/general_text_accent"/>
+
+                <View
+                    android:id="@+id/divider_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/general_divider_height"
+                    android:background="@color/general_divider"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_reservationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_reservation"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    app:typeface="BOLD"
+                    style="@style/UitAgenda.TextView.Title"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_reservation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    android:textColorLink="@color/general_text_accent"/>
+
+                <View
+                    android:id="@+id/divider_reservation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/general_divider_height"
+                    android:background="@color/general_divider"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_linksTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_links"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    app:typeface="BOLD"
+                    style="@style/UitAgenda.TextView.Title"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_links"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    android:textColorLink="@color/general_text_accent"/>
+
+                <View
+                    android:id="@+id/divider_links"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/general_divider_height"
+                    android:background="@color/general_divider"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_priceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_price"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    app:typeface="BOLD"
+                    style="@style/UitAgenda.TextView.Title"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_priceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_priceDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+                <View
+                    android:id="@+id/divider_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/general_divider_height"
+                    android:background="@color/general_divider"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_djubbleTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_djubble"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    app:typeface="BOLD"
+                    style="@style/UitAgenda.TextView.Title"/>
+
+
+                <org.uitagenda.views.Button
+                    android:id="@+id/button_djubble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_djubble_button"
+                    android:layout_marginBottom="@dimen/general_view_spacing" />
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_djubbleDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    android:text="@string/event_djubble_info"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_djubbleDownload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    android:text="@string/event_djubble_download"/>
+
+                <View
+                    android:id="@+id/divider_djubble"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/general_divider_height"
+                    android:background="@color/general_divider"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_performersTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_performers"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    app:typeface="BOLD"
+                    style="@style/UitAgenda.TextView.Title"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_performers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+                <View
+                    android:id="@+id/divider_performers"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/general_divider_height"
+                    android:background="@color/general_divider"
+                    android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_longDescriptionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_description"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    app:typeface="BOLD"
+                    style="@style/UitAgenda.TextView.Title"/>
+
+                <org.uitagenda.views.TextView
+                    android:id="@+id/textView_longDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/general_view_spacing"
+                    android:textColorLink="@color/general_text_accent"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

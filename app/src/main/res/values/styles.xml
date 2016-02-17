@@ -1,0 +1,69 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/general_primary</item>
+        <item name="colorPrimaryDark">@color/general_primary_dark</item>
+        <item name="colorAccent">@color/general_accent</item>
+        <item name="android:windowBackground">@color/general_window_background</item>
+        <item name="android:textViewStyle">@style/UitAgenda.TextView</item>
+        <item name="buttonStyle">@style/UitAgenda.Button</item>
+        <item name="editTextStyle">@style/UitAgenda.EditText</item>
+        <item name="checkboxStyle">@style/UitAgenda.CheckBox</item>
+
+        <item name="md_content_color">@color/general_text</item>
+        <item name="md_divider_color">@color/general_accent</item>
+        <item name="md_medium_font">PTN77F.ttf</item>
+        <item name="md_regular_font">PTN57F.ttf</item>
+    </style>
+
+    <style name="UitAgenda"/>
+
+    <style name="UitAgenda.TextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/general_text</item>
+        <item name="android:textSize">@dimen/general_text</item>
+    </style>
+
+    <style name="UitAgenda.TextView.Title">
+        <item name="android:textSize">@dimen/general_text_title</item>
+    </style>
+
+    <style name="UitAgenda.TextView.Title.Accent">
+        <item name="android:textColor">@color/general_text_accent</item>
+    </style>
+
+    <style name="UitAgenda.TextView.Title.Large">
+        <item name="android:textSize">@dimen/general_text_title_large</item>
+    </style>
+
+    <style name="UitAgenda.TextView.Light">
+        <item name="android:textColor">@color/general_text_light</item>
+    </style>
+
+    <style name="UitAgenda.TextView.Accent">
+        <item name="android:textColor">@color/general_text_accent</item>
+    </style>
+
+    <style name="UitAgenda.Button" parent="android:Widget.Button">
+        <item name="android:textColor">@color/general_button_text</item>
+        <item name="android:textSize">@dimen/button_text</item>
+        <item name="android:background">@drawable/selector_button</item>
+        <item name="android:minHeight">@dimen/button_min_height</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
+        <item name="android:paddingLeft">@dimen/button_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/button_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/button_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/button_padding_vertical</item>
+        <item name="android:drawablePadding">@dimen/general_button_drawable_padding</item>
+    </style>
+
+    <style name="UitAgenda.EditText" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/general_text</item>
+        <item name="android:textSize">@dimen/general_text_edit</item>
+    </style>
+
+    <style name="UitAgenda.CheckBox" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/general_text</item>
+        <item name="android:textSize">@dimen/general_text</item>
+    </style>
+
+</resources>

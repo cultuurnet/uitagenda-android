@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/list_item_margin_vertical"
+    android:layout_marginBottom="@dimen/list_item_margin_vertical"
+    android:layout_marginLeft="@dimen/list_item_margin_horizontal"
+    android:layout_marginRight="@dimen/list_item_margin_horizontal"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="@dimen/list_item_elevation"
+    app:cardMaxElevation="@dimen/list_item_max_elevation"
+    app:cardCornerRadius="@dimen/list_item_corner_radius"
+    app:cardPreventCornerOverlap="true"
+    app:cardBackgroundColor="@color/list_item_background">
+
+    <RelativeLayout
+        android:id="@+id/layout_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView_event"
+            android:layout_width="@dimen/list_item_image_width"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/layout_content"
+            android:layout_alignBottom="@+id/layout_content"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/imageView_overlay"
+            android:layout_width="@dimen/list_item_overlay"
+            android:layout_height="@dimen/list_item_overlay"
+            android:layout_alignTop="@id/imageView_event"
+            android:layout_alignLeft="@id/imageView_event"
+            android:scaleType="centerCrop"
+            android:src="@drawable/overlay_kids"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/list_item_min_height"
+            android:layout_toRightOf="@id/imageView_event"
+            android:padding="@dimen/list_item_padding">
+
+            <ImageView
+                android:id="@+id/imageView_favorite"
+                android:layout_width="@dimen/list_item_favorite"
+                android:layout_height="@dimen/list_item_favorite"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+            <org.uitagenda.views.TextView
+                android:id="@+id/textView_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/list_item_text_padding_bottom"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:typeface="BOLD"
+                style="@style/UitAgenda.TextView.Title.Accent"/>
+
+            <org.uitagenda.views.TextView
+                android:id="@+id/textView_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/list_item_text_padding_bottom"
+                android:layout_below="@id/textView_title"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/imageView_favorite"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:typeface="REGULAR"/>
+
+            <org.uitagenda.views.TextView
+                android:id="@+id/textView_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/list_item_text_padding_bottom"
+                android:layout_below="@id/textView_category"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/imageView_favorite"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:typeface="REGULAR"
+                style="@style/UitAgenda.TextView.Light"/>
+
+            <org.uitagenda.views.TextView
+                android:id="@+id/textView_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_location"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/imageView_favorite"
+                app:typeface="BOLD"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

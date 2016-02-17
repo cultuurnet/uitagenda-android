@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/layout_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/general_button">
+
+        <org.uitagenda.views.Button
+            android:id="@+id/button_previous"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_previous"
+            android:text="@string/event_previous"
+            android:gravity="left|center_vertical"
+            app:typeface="REGULAR"/>
+
+        <View
+            android:layout_width="@dimen/general_divider_height"
+            android:layout_height="match_parent"
+            android:background="@color/general_window_background"/>
+
+        <org.uitagenda.views.Button
+            android:id="@+id/button_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/ic_next"
+            android:text="@string/event_next"
+            android:gravity="right|center_vertical"
+            app:typeface="REGULAR"/>
+
+    </LinearLayout>
+
+</LinearLayout>

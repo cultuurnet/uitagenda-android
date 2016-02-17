@@ -1,0 +1,150 @@
+<resources>
+
+    <string name="app_name">UiTagenda</string>
+
+    <string name="label_detail">Detail</string>
+    <string name="label_search_results">Zoekresultaten</string>
+
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Sluit</string>
+
+    <string-array name="drawer_items">
+        <item>Hier en nu</item>
+        <item>Zoeken</item>
+        <item>Favorieten</item>
+        <item>Mijn zoekopdrachten</item>
+        <item>Over</item>
+    </string-array>
+
+    <string name="main_action_favorites">Favorieten</string>
+    <string name="main_action_search">Zoeken</string>
+
+    <string name="dialog_positive">Ok</string>
+    <string name="dialog_negative">Annuleer</string>
+
+    <string name="no_events">Er konden geen resultaten gevonden worden.</string>
+    <string name="no_events_internet">Er heeft zich een probleem voor gedaan. Heeft u een internetverbinding?</string>
+    <string name="no_events_location">Locatie bepalen is mislukt. Staan locatievoorzieningen aan?</string>
+    <string name="no_events_favorites">U heeft nog geen favorieten.</string>
+    <string name="no_search_history">U heeft nog geen zoekopdrachten bewaard.</string>
+    <string name="no_about">De pagina kon niet geladen worden.</string>
+    <string name="no_about_internet">De pagina kon niet geladen worden. Is er een internetverbinding?</string>
+
+    <string name="current_no_location_message">Locatievoorzieningen staan niet aan</string>
+    <string name="current_no_location_action">Instellingen</string>
+
+    <string name="event_distance_m">%1$dm</string>
+    <string name="event_distance_km">%1$.1fkm</string>
+    <string name="event_previous">Vorige</string>
+    <string name="event_next">Volgende</string>
+    <string name="event_organiser">Organisator</string>
+    <string name="event_contact">Contact</string>
+    <string name="event_reservation">Reservatie</string>
+    <string name="event_links">Links</string>
+    <string name="event_price">Prijs</string>
+    <string name="event_djubble">Nodig vrienden uit</string>
+    <string name="event_djubble_button">Openen in Djubble</string>
+    <string name="event_djubble_info">Met Djubble nodig je vrienden uit om hier samen met jou naartoe te gaan</string>
+    <string name="event_djubble_download"><u>Download de gratis app</u></string>
+    <string name="event_description">Uitgebreide Omschrijving</string>
+    <string name="event_performers">Wie</string>
+    <string name="event_price_description">Extra info:&#160;</string>
+    <string name="event_price_value">€&#160;</string>
+    <string name="event_price_value_free">Gratis</string>
+    <string name="event_action_favorite_add">Toevoegen aan favorieten</string>
+    <string name="event_action_favorite_remove">Verwijderen uit favorieten</string>
+    <string name="event_action_share">Delen</string>
+    <string name="event_share_text">%1$s https://www.uitinvlaanderen.be/agenda/e/app_redirect/%2$s?utm_campaign=UiTagenda&amp;utm_medium=android&amp;utm_source=app&amp;utm_content=share (Via #UiTagenda)</string>
+
+    <string name="event_link_progress">Data ophalen&#8230;</string>
+    <string name="event_link_error_internet">Er heeft zich een probleem voor gedaan. Heeft u een internetverbinding?</string>
+    <string name="event_link_error">Er is geen event geassocieerd met deze link.</string>
+    <string name="event_link_error_title">Fout</string>
+    <string name="event_link_error_positive">Probeer opnieuw</string>
+
+    <string name="search_location">Waar</string>
+    <string name="search_distance">Straal</string>
+    <string name="search_date">Wanneer</string>
+    <string name="search_category">Wat</string>
+    <string name="search_term_hint">Zoekterm</string>
+    <string name="search_kids_only">Enkel voor kinderen</string>
+    <string name="search_free">Enkel gratis</string>
+    <string name="search_courses">Geen cursussen en workshops</string>
+    <string name="search_search">Zoeken</string>
+    <string name="search_category_hint">Filteren</string>
+    <string name="search_city_hint">Stad of postcode</string>
+    <string name="search_category_all">Alles</string>
+    <string name="search_location_header_last">Favoriete locaties</string>
+    <string name="search_location_header_all">Alle locaties</string>
+    <string name="search_location_all">Alle locaties</string>
+    <string name="search_location_current">Huidige locatie</string>
+
+    <string name="search_results_save_message">Zoekopdracht bewaren?</string>
+    <string name="search_results_save_action">Bewaren</string>
+    <string name="search_results_saved_message">Zoekopdracht bewaard</string>
+
+    <string name="djubble_dialog_title">Afspreken via Djubble</string>
+    <string name="djubble_dialog_subtitle">Kies een datum</string>
+    <string name="djubble_dialog_day">dag</string>
+    <string name="djubble_dialog_hour">uur</string>
+    <string name="djubble_dialog_ok">OK</string>
+    <string name="djubble_dialog_cancel">Annuleren</string>
+    <string name="djubble_dialog_error_incomplete">Gelieve een datum en/of tijdstip te kiezen&#8230;</string>
+    <string name="djubble_dialog_period_title">Kies een datum tussen %1$s en %2$s</string>
+    <string name="djubble_dialog_past">De mogelijke tijdstippen zijn reeds afgelopen</string>
+    <string name="djubble_dialog_at">%1$s om %2$s</string>
+    <string name="djubble_base_url">https://www.uitinvlaanderen.be/agenda/e//%1$s</string>
+    <string name="djubble_uri">djubble://add?lang=nl&amp;subject=%1$s via UiTinVlaanderen.be&amp;url=%2$s&amp;location=%3$s&amp;longitude=%4$s&amp;latitude=%5$s&amp;date=%6$s&amp;source=uitagenda</string>
+
+    <string-array name="search_distance">
+        <item>1 km</item>
+        <item>2 km</item>
+        <item>5 km</item>
+        <item>10 km</item>
+        <item>15 km</item>
+        <item>25 km</item>
+    </string-array>
+
+    <string-array name="search_date">
+        <item>Vandaag</item>
+        <item>Morgen</item>
+        <item>Dit weekend</item>
+        <item>Volgend weekend</item>
+        <item>Volgende 7 dagen</item>
+        <item>Volgende 30 dagen</item>
+        <item>Volgende 3 maanden</item>
+        <item>Volgende 12 maanden</item>
+        <item>Permanent</item>
+    </string-array>
+
+    <string-array name="search_category">
+        <item>Begeleide uitstap of rondleiding</item>
+        <item>Beurs</item>
+        <item>Concert</item>
+        <item>Congres of studiedag</item>
+        <item>Cursus of workshop</item>
+        <item>Dansvoorstelling</item>
+        <item>Eten en drinken</item>
+        <item>Festival</item>
+        <item>Fiets- of wandelroute</item>
+        <item>Film</item>
+        <item>Kamp of vakantie</item>
+        <item>Kermis of feestelijkheid</item>
+        <item>Lezing of congres</item>
+        <item>Markt of braderie</item>
+        <item>Monument</item>
+        <item>Natuurgebied of park</item>
+        <item>Opendeurdag</item>
+        <item>Park of tuin</item>
+        <item>Party of fuif</item>
+        <item>Recreatiedomein of centrum</item>
+        <item>Spel of quiz</item>
+        <item>Sportactiviteit</item>
+        <item>Sportwedstrijd bekijken</item>
+        <item>Tentoonstelling</item>
+        <item>Theatervoorstelling</item>
+        <item>Thema of pretpark</item>
+        <item>Toeristisch evenement</item>
+    </string-array>
+
+</resources>

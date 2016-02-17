@@ -1,1 +1,1 @@
-include ':UiTagenda'
+include ':library', ':app'

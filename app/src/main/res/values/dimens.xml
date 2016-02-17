@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="general_fragment_padding">12dp</dimen>
+    <dimen name="general_divider_height">1dp</dimen>
+    <dimen name="general_text">16sp</dimen>
+    <dimen name="general_text_edit">16sp</dimen>
+    <dimen name="general_text_title">18sp</dimen>
+    <dimen name="general_text_title_large">24sp</dimen>
+    <dimen name="general_button_drawable_padding">16dp</dimen>
+    <dimen name="general_view_spacing">6dp</dimen>
+
+    <dimen name="button_corners">2dp</dimen>
+    <dimen name="button_padding_horizontal">16dp</dimen>
+    <dimen name="button_padding_vertical">8dp</dimen>
+    <dimen name="button_min_height">40dp</dimen>
+    <dimen name="button_min_width">50dp</dimen>
+    <dimen name="button_text">16sp</dimen>
+
+    <dimen name="drawer_width">240dp</dimen>
+    <dimen name="drawer_shadow">10dp</dimen>
+    <dimen name="drawer_item_padding">12dp</dimen>
+    <dimen name="drawer_icon">24dp</dimen>
+    <dimen name="drawer_icon_margin_right">12dp</dimen>
+
+    <dimen name="list_empty_image">120dp</dimen>
+    <dimen name="list_empty_image_margin_bottom">32dp</dimen>
+    <dimen name="list_padding">6dp</dimen>
+    <dimen name="list_item_min_height">90dp</dimen>
+    <dimen name="list_item_corner_radius">2dp</dimen>
+    <dimen name="list_item_elevation">2dp</dimen>
+    <dimen name="list_item_max_elevation">4dp</dimen> <!-- Used to calculate extra CardView padding -->
+    <dimen name="list_item_margin_vertical">0dp</dimen> <!-- CardView will add a padding of 6.6dp -->
+    <dimen name="list_item_margin_horizontal">2dp</dimen> <!-- CardView will add a padding of 4.6dp -->
+    <dimen name="list_item_image_width">90dp</dimen>
+    <dimen name="list_item_overlay">40dp</dimen>
+    <dimen name="list_item_padding">8dp</dimen>
+    <dimen name="list_item_text_padding_bottom">6dp</dimen>
+    <dimen name="list_item_favorite">30dp</dimen>
+    <dimen name="list_item_distance_min_width">90dp</dimen>
+
+    <dimen name="detail_image_height">180dp</dimen>
+    <dimen name="detail_image_resize_width">320dp</dimen>
+    <dimen name="detail_overlay">70dp</dimen>
+    <dimen name="detail_icon">16dp</dimen>
+    <dimen name="detail_icon_margin_right">12dp</dimen>
+
+
+    <dimen name="dialog_margin">16dp</dimen>
+    <dimen name="dialog_padding">8dp</dimen>
+    <dimen name="dialog_title">20sp</dimen>
+
+
+</resources>

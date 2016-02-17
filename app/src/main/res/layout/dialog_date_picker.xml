@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/general_fragment_padding">
+
+    <org.uitagenda.views.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/djubble_dialog_title"
+        android:textSize="@dimen/dialog_title"
+        android:layout_marginBottom="@dimen/dialog_margin"/>
+
+    <org.uitagenda.views.TextView
+        android:id="@+id/textView_dialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/djubble_dialog_subtitle"
+        android:layout_marginBottom="@dimen/dialog_padding"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <org.uitagenda.views.TextView
+            android:id="@+id/textView_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/djubble_dialog_day"
+            android:layout_weight="3"
+            android:layout_marginRight="@dimen/dialog_padding"
+            android:background="@color/dialog_box"
+            android:padding="@dimen/dialog_padding"/>
+
+        <org.uitagenda.views.TextView
+            android:id="@+id/textView_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/djubble_dialog_hour"
+            android:background="@color/dialog_box"
+            android:layout_weight="1"
+            android:padding="@dimen/dialog_padding"/>
+
+    </LinearLayout>
+
+</LinearLayout>

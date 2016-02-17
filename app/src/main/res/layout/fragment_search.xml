@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/general_fragment_padding"
+    android:clipToPadding="false"
+    android:scrollbarStyle="outsideOverlay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground">
+
+            <org.uitagenda.views.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_location"
+                android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+            <org.uitagenda.views.TextView
+                android:id="@+id/textView_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/general_view_spacing"
+                style="@style/UitAgenda.TextView.Light"/>
+
+            <include layout="@layout/divider"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/general_view_spacing"
+            android:background="?android:attr/selectableItemBackground">
+
+            <org.uitagenda.views.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_distance"
+                android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+            <org.uitagenda.views.TextView
+                android:id="@+id/textView_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/general_view_spacing"
+                style="@style/UitAgenda.TextView.Light"/>
+
+            <include layout="@layout/divider"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/general_view_spacing"
+            android:background="?android:attr/selectableItemBackground">
+
+            <org.uitagenda.views.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_date"
+                android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+            <org.uitagenda.views.TextView
+                android:id="@+id/textView_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/general_view_spacing"
+                style="@style/UitAgenda.TextView.Light"/>
+
+            <include layout="@layout/divider"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/general_view_spacing"
+            android:background="?android:attr/selectableItemBackground">
+
+            <org.uitagenda.views.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_category"
+                android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+            <org.uitagenda.views.TextView
+                android:id="@+id/textView_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/general_view_spacing"
+                style="@style/UitAgenda.TextView.Light"/>
+
+            <include layout="@layout/divider"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/general_view_spacing">
+
+            <org.uitagenda.views.EditText
+                android:id="@+id/editText_term"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/general_view_spacing"
+                android:hint="@string/search_term_hint"
+                android:inputType="text"
+                android:background="@null"/>
+
+            <include layout="@layout/divider"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/general_view_spacing">
+
+            <org.uitagenda.views.CheckBox
+                android:id="@+id/checkBox_kids"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_kids_only"
+                android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+            <include layout="@layout/divider"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/general_view_spacing">
+
+            <org.uitagenda.views.CheckBox
+                android:id="@+id/checkBox_free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_free"
+                android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+            <include layout="@layout/divider"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/general_view_spacing">
+
+            <org.uitagenda.views.CheckBox
+                android:id="@+id/checkBox_courses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_courses"
+                android:checked="true"
+                android:layout_marginBottom="@dimen/general_view_spacing"/>
+
+            <include layout="@layout/divider"/>
+
+        </LinearLayout>
+
+        <org.uitagenda.views.Button
+            android:id="@+id/button_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/search_search"
+            android:layout_marginTop="@dimen/general_view_spacing"/>
+
+    </LinearLayout>
+
+</ScrollView>

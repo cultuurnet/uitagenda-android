@@ -1,0 +1,86 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="org.uitagenda">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:name=".application.UitAgendaApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="" />
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.DetailActivity"
+            android:launchMode="singleTop"
+            android:label="@string/label_detail"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.SearchResultActivity"
+            android:launchMode="singleTop"
+            android:label="@string/label_search_results"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.DetailLinkActivity"
+            android:launchMode="singleTop"
+            android:label="@string/label_detail"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="uitagenda" android:host="event"/>
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".contentproviders.EventContentProvider"
+            android:authorities="org.uitagenda.contentproviders.EventContentProvider"
+            android:exported="false"/>
+
+        <provider
+            android:name=".contentproviders.SearchContentProvider"
+            android:authorities="org.uitagenda.contentproviders.SearchContentProvider"
+            android:exported="false"/>
+
+    </application>
+
+</manifest>
